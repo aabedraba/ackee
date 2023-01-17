@@ -4,9 +4,6 @@ FROM node:14-alpine AS build
 
 # Add and set non-root user. Disable the password and do not create a home folder.
 
-RUN adduser -D ackee ackee
-USER ackee
-
 WORKDIR /srv/app/
 
 # Add dependencies first so that Docker can use the cache as long as the dependencies stay unchanged
